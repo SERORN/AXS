@@ -1,0 +1,35 @@
+{
+  "name": "axs360-landing",
+  "version": "1.0.0",
+  "description": "AXS360 Commercial Landing Page",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@next/font": "14.0.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "framer-motion": "^10.16.4",
+    "react-hook-form": "^7.47.0",
+    "lucide-react": "^0.292.0",
+    "@headlessui/react": "^1.7.17",
+    "clsx": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18.2.14",
+    "eslint": "^8.51.0",
+    "eslint-config-next": "14.0.0",
+    "typescript": "^5.2.2"
+  }
+}

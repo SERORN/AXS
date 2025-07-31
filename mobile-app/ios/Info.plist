@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- App Information -->
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleDisplayName</key>
+    <string>AXS360</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+
+    <!-- Supported Device Types -->
+    <key>UIDeviceFamily</key>
+    <array>
+        <integer>1</integer>
+        <integer>2</integer>
+    </array>
+
+    <!-- Required Device Capabilities -->
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>armv7</string>
+    </array>
+
+    <!-- Supported Interface Orientations -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <!-- Camera Permissions -->
+    <key>NSCameraUsageDescription</key>
+    <string>AXS360 needs camera access to scan QR codes for vehicle access control. This enables secure and fast authentication.</string>
+
+    <!-- Location Permissions -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>AXS360 uses your location to find nearby parking facilities and provide location-based services.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>AXS360 uses your location to provide automated check-in/check-out and location-based notifications.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>AXS360 uses your location for automated services and geo-fencing capabilities.</string>
+
+    <!-- Photo Library Permissions -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>AXS360 needs access to your photo library to allow you to upload vehicle photos and documentation.</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>AXS360 can save photos and documents to your photo library for your records.</string>
+
+    <!-- Contacts Permissions -->
+    <key>NSContactsUsageDescription</key>
+    <string>AXS360 can access your contacts to help you invite friends and share access credentials.</string>
+
+    <!-- Microphone Permissions -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>AXS360 may use the microphone for voice commands and communication features.</string>
+
+    <!-- Face ID / Touch ID -->
+    <key>NSFaceIDUsageDescription</key>
+    <string>AXS360 uses Face ID for secure authentication and quick access to your account.</string>
+
+    <!-- Calendar Permissions -->
+    <key>NSCalendarsUsageDescription</key>
+    <string>AXS360 can create calendar events for your service appointments and reservations.</string>
+
+    <!-- Motion Permissions -->
+    <key>NSMotionUsageDescription</key>
+    <string>AXS360 uses motion data to detect when you arrive at or leave locations for automated check-in/out.</string>
+
+    <!-- Background Modes -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>background-fetch</string>
+        <string>background-processing</string>
+        <string>remote-notification</string>
+        <string>location</string>
+    </array>
+
+    <!-- App Transport Security -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>axs360.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSExceptionMinimumTLSVersion</key>
+                <string>TLSv1.2</string>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+
+    <!-- URL Schemes -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>com.axs360.mobile</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>axs360</string>
+            </array>
+        </dict>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>com.axs360.mobile.https</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>https</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- Associated Domains -->
+    <key>com.apple.developer.associated-domains</key>
+    <array>
+        <string>applinks:app.axs360.com</string>
+        <string>applinks:www.axs360.com</string>
+    </array>
+
+    <!-- Launch Screen -->
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+
+    <!-- Status Bar -->
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleDefault</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+
+    <!-- Appearance -->
+    <key>UIUserInterfaceStyle</key>
+    <string>Automatic</string>
+
+    <!-- File Sharing -->
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
+
+    <!-- App Store -->
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+
+    <!-- Push Notifications -->
+    <key>UIRemoteNotificationTypes</key>
+    <array>
+        <string>alert</string>
+        <string>badge</string>
+        <string>sound</string>
+    </array>
+
+    <!-- Keyboard -->
+    <key>UIKeyboardAppearance</key>
+    <string>Default</string>
+
+    <!-- Privacy Manifest -->
+    <key>NSPrivacyAccessedAPITypes</key>
+    <array>
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>NSPrivacyAccessedAPICategoryLocation</string>
+            <key>NSPrivacyAccessedAPITypeReasons</key>
+            <array>
+                <string>NSPrivacyAccessedAPIReasonLocationForNavigation</string>
+            </array>
+        </dict>
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>NSPrivacyAccessedAPICategoryCamera</string>
+            <key>NSPrivacyAccessedAPITypeReasons</key>
+            <array>
+                <string>NSPrivacyAccessedAPIReasonCameraForQRScanning</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- Security -->
+    <key>NSAllowsArbitraryLoads</key>
+    <false/>
+    
+    <!-- Performance -->
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+    
+    <!-- Accessibility -->
+    <key>UIAccessibilityEnabled</key>
+    <true/>
+</dict>
+</plist>

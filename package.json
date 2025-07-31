@@ -1,0 +1,47 @@
+{
+  "name": "axs---your-keyless-access",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "vite",
+    "dev:full": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "install:backend": "cd backend && npm install",
+    "setup": "npm install && npm run install:backend",
+    "build:full": "npm run install:backend && cd backend && npm run build && cd .. && npm run build",
+    "build:frontend": "npm run build",
+    "build:backend": "cd backend && npm run build",
+    "deploy:prepare": "npm run build:full && npm run deploy:copy",
+    "deploy:copy": "mkdir -p dist/backend && cp -r backend/dist/* dist/backend/ && cp -r backend/package.json dist/backend/",
+    "test": "echo \"No tests specified\" && exit 0",
+    "test:integration": "node scripts/test-integration.cjs",
+    "lint": "echo \"No ESLint configured yet\" && exit 0",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf node_modules dist .vite",
+    "clean:all": "npm run clean && cd backend && npm run clean",
+    "deps:check": "depcheck",
+    "deps:clean": "npm prune && npm dedupe",
+    "project:clean": "node scripts/cleanup-project.cjs",
+    "start": "npm run preview"
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^3.8.1",
+    "@stripe/stripe-js": "^7.7.0",
+    "@types/react-router-dom": "^5.3.3",
+    "lucide-react": "^0.534.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.7.1",
+    "react-toastify": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "concurrently": "^7.6.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  }
+}

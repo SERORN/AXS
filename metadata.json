@@ -1,0 +1,6 @@
+
+{
+  "name": "AXS - Your Keyless Access",
+  "description": "A web application for managing keyless access passes for vehicles and airport lounges. Users can sign up, log in, view their passes, see access history, and add new passes.",
+  "requestFramePermissions": []
+}
